@@ -1,0 +1,65 @@
+import java.util.Scanner;
+public class gecme_notu {
+    public static void main(String[] args){
+        Scanner input= new Scanner(System.in);
+        double toplam=0;
+        int mevcut=5;
+
+        System.out.println("Matematik notunuz: ");
+        int mat= input.nextInt();
+        if(mat>0 && mat<=100 )
+            toplam=toplam+mat;
+        //if(mat>0 && mat<=100 ){toplam+=mat};
+        else {
+            mevcut--;
+            System.out.println("Matematik notunuz ortalamaya katılmadı.");
+        }
+
+        System.out.println("Türkçe notunuz: ");
+        int turk= input.nextInt();
+        if(turk>0 && turk<=100)
+            toplam += turk;
+        else {
+            mevcut--;
+            System.out.println("Türkçe notunuz ortalamaya katılmadı.");
+        }
+
+        System.out.println("Fizik notunuz: ");
+        int fiz= input.nextInt();
+        if(fiz>0 && fiz<=100)
+            toplam=toplam+fiz;
+        else {
+            mevcut--;
+            System.out.println("Fizik notunuz ortalamaya katılmadı.");
+        }
+
+        System.out.println("Kimya notunuz: ");
+        int kim= input.nextInt();
+        if(kim>0 && kim<=100)
+            toplam=toplam+kim;
+        else {
+            mevcut--;
+            System.out.println("Kimya notunuz ortalamaya katılmadı.");
+        }
+
+        System.out.println("Müzik notunuz: ");
+        int muz= input.nextInt();
+        if(muz>0 && muz<=100)
+            toplam=toplam+muz;
+        else {
+            mevcut--;
+            System.out.println("Müzik notunuz ortalamaya katılmadı.");
+        }
+        
+        double avarage= toplam/mevcut;
+        //double avarage = (mat+kim+turk+fiz+muz) / 5;
+        if(avarage>=55)
+            System.out.println("Tebrikler geçtiniz!");
+
+        else
+            System.out.println("Kaldınız!");
+
+        System.out.println("Ortalamanız: " + avarage);
+
+    }
+}
